@@ -1,0 +1,4 @@
+<div class="detail-container" *ngIf="item">
+	<h1>{{item.title | uppercase}}</h1>
+	<input [(ngModel)]="item.description" placeholder="description" />
+</div>
