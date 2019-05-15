@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../item';
-import { ITEMS } from '../mockup';
+// import { Item } from '../item';
+// import { ITEMS } from '../mockup';
+import { ItemService } from '../item.service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { ITEMS } from '../mockup';
   styleUrls: ['./items.component.scss']
 })
 export class ItemsComponent implements OnInit {
-	items: Item[] = ITEMS;
+	items: Item[];
 	selectedItem: Item;
   	constructor() { }
 
