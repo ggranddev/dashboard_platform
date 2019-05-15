@@ -15,4 +15,8 @@ export class ItemsComponent implements OnInit {
   	ngOnInit() {
 	
   	}
+
+  	onSelect(item) {
+  		console.log("Here is action", item);
+  	}
 }

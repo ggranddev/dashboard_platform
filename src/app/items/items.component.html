@@ -1,5 +1,5 @@
 <div>
-	<li *ngFor="let item of items">
+	<li *ngFor="let item of items" (click)="onSelect(item)">
 		<h1>{{item.id}}</h1>
 	  	<h2>{{item.title}}</h2>
 	  	<h3>{{item.description}}</h3>
