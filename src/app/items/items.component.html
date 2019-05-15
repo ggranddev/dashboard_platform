@@ -1,7 +1,14 @@
 <div>
-	<li *ngFor="let item of items" (click)="onSelect(item)">
-		<h1>{{item.id}}</h1>
-	  	<h2>{{item.title}}</h2>
-	  	<h3>{{item.description}}</h3>
-  	</li>	
+
+	<div class="list-container">
+		<li *ngFor="let item of items" (click)="onSelect(item)">
+			<h1>{{item.id}}</h1>
+		  	<h2>{{item.title}}</h2>
+		  	<h3>{{item.description}}</h3>
+	  	</li>	
+  	</div>
+	<div class="detail-container" *ngIf="selectedItem">
+		<h1>{{selectedItem.title | uppercase}}</h1>
+		<input [(ngModel)]="selectedItem.description" placeholder="description" />
+	</div>	
 </div>

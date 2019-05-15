@@ -10,13 +10,14 @@ import { ITEMS } from '../mockup';
 })
 export class ItemsComponent implements OnInit {
 	items: Item[] = ITEMS;
+	selectedItem: Item;
   	constructor() { }
 
   	ngOnInit() {
 	
   	}
 
-  	onSelect(item) {
-  		console.log("Here is action", item);
+  	onSelect(item: Item) {
+  		this.selectedItem = item;
   	}
 }
