@@ -23,6 +23,6 @@ export class ItemsComponent implements OnInit {
   	}
 
   	getItems() {
-      this.items = this.itemService.getItems();
+      this.itemService.getItems().subscribe(items => this.items = items);
     }
 }
