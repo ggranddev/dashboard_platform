@@ -1,6 +1,10 @@
 <div class="main-wrapper">
+  <nav>
+    <a routerLink="/items">Items</a>
+    <a routerLink="/dashboard">dashboard</a>
+  </nav>
   <app-header></app-header>
-  <app-items></app-items>
+  <router-outlet></router-outlet>
 </div>
 
 <router-outlet></router-outlet>
