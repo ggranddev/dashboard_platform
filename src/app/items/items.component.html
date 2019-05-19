@@ -1,10 +1,12 @@
 <div>
 	<div class="list-container">
-		<li *ngFor="let item of items" (click)="onSelect(item)" [class.select]="item === selectedItem">
-			<h1>{{item.id}}</h1>
+		<li *ngFor="let item of items">
+			<a routerLink="/detail/{{item.id}}">
+				<h1>{{item.id}}</h1>
+			</a>
 		  	<h2>{{item.title}}</h2>
 		  	<h3>{{item.description}}</h3>
 	  	</li>	
   	</div>
-  	<app-item-detail [item]="selectedItem"></app-item-detail>
+
 </div>
